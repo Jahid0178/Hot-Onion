@@ -8,7 +8,11 @@ const Hero = () => {
         <h1>Best food waiting for your belly</h1>
         <br />
         <div className="input-container d-flex justify-content-center w-75 mx-auto">
-          <input type="text" className="search-field rounded-pill w-100" />
+          <input
+            type="text"
+            placeholder="Search food items"
+            className="search-field rounded-pill w-100"
+          />
           <button className="search-btn rounded-pill">Search</button>
         </div>
       </div>
