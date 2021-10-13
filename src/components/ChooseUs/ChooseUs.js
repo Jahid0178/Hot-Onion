@@ -29,7 +29,7 @@ const ChooseUs = () => {
                   <img src={FirstDeleveryIcon} alt="" />
                 </div>
                 <div className="ms-3">
-                  <Card.Title>Card title</Card.Title>
+                  <Card.Title>Fast Delevery</Card.Title>
                   <Card.Text className="text-align">
                     Keep your systems in sync with automated web hook based
                     notifications each time link is paid and how we dream about
@@ -47,7 +47,7 @@ const ChooseUs = () => {
                   <img src={ResponderIcon} alt="" />
                 </div>
                 <div className="ms-3">
-                  <Card.Title>Card title</Card.Title>
+                  <Card.Title>A Good Auto Responder</Card.Title>
                   <Card.Text className="text-align">
                     Keep your systems in sync with automated web hook based
                     notifications each time link is paid and how we dream about
@@ -65,7 +65,7 @@ const ChooseUs = () => {
                   <img src={HomeDeleveryIcon} alt="" />
                 </div>
                 <div className="ms-3">
-                  <Card.Title>Card title</Card.Title>
+                  <Card.Title>Home Delevery</Card.Title>
                   <Card.Text className="text-align">
                     Keep your systems in sync with automated web hook based
                     notifications each time link is paid and how we dream about

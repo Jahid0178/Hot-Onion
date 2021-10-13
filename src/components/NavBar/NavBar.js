@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import "./NavBar.css";
 import Logo from "../../images/logo.png";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -17,8 +18,12 @@ const NavBar = () => {
             />
           </Navbar.Brand>
           <Nav className="ms-auto">
-            <Nav.Link href="#features">Login</Nav.Link>
-            <Nav.Link href="#pricing">Sign Up</Nav.Link>
+            <Nav.Link href="/login" className="fw-bold">
+              Login
+            </Nav.Link>
+            <Nav.Link href="/signup" className="signup-btn">
+              Sign Up
+            </Nav.Link>
           </Nav>
         </Container>
       </Navbar>
