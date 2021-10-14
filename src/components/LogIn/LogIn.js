@@ -4,7 +4,12 @@ import useAuth from "../../hooks/useAuth";
 import "./LogIn.css";
 
 const LogIn = () => {
-  const { signInUsingGoogle, signInUser } = useAuth();
+  const {
+    signInUsingGoogle,
+    signInUser,
+    handleEmailChange,
+    handlePasswordChange,
+  } = useAuth();
   return (
     <div className="login-container d-flex justify-content-center align-items-center">
       <div className="border border-2 p-3 rounded-1">
@@ -12,7 +17,11 @@ const LogIn = () => {
         <Form onSubmit={(e) => e.preventDefault()}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
+            <Form.Control
+              type="email"
+              placeholder="Enter email"
+              onBlur={handleEmailChange}
+            />
             <Form.Text className="text-muted">
               We'll never share your email with anyone else.
             </Form.Text>
@@ -20,7 +29,11 @@ const LogIn = () => {
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Password" />
+            <Form.Control
+              type="password"
+              placeholder="Password"
+              onBlur={handlePasswordChange}
+            />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicCheckbox">
             <Form.Check type="checkbox" label="Check me out" />
