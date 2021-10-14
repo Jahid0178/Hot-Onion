@@ -4,7 +4,7 @@ import useAuth from "../../hooks/useAuth";
 import "./LogIn.css";
 
 const LogIn = () => {
-  const { signInUsingGoogle } = useAuth();
+  const { signInUsingGoogle, signInUser } = useAuth();
   return (
     <div className="login-container d-flex justify-content-center align-items-center">
       <div className="border border-2 p-3 rounded-1">
@@ -25,8 +25,8 @@ const LogIn = () => {
           <Form.Group className="mb-3" controlId="formBasicCheckbox">
             <Form.Check type="checkbox" label="Check me out" />
           </Form.Group>
-          <Button variant="primary" type="submit">
-            Submit
+          <Button variant="primary" type="submit" onClick={signInUser}>
+            Login
           </Button>
           <br />
           <div className="text-center mt-2">

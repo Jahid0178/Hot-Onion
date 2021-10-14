@@ -54,7 +54,7 @@ const SignUp = () => {
                 <p className="text-danger">{error}</p>
               </div>
               <Col sm={{ span: 10, offset: 2 }}>
-                <Form.Check label="Remember me" />
+                <Form.Check label="Already have an account?" />
               </Col>
             </Form.Group>
 

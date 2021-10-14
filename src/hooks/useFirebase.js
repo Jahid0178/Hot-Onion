@@ -3,7 +3,9 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
   onAuthStateChanged,
+  sendEmailVerification,
   signOut,
 } from "firebase/auth";
 import { useEffect, useState } from "react";
@@ -19,7 +21,7 @@ const useFirebase = () => {
   const auth = getAuth();
 
   const googleProvider = new GoogleAuthProvider();
-
+  // sign in use google
   const signInUsingGoogle = () => {
     signInWithPopup(auth, googleProvider)
       .then((result) => {
@@ -47,10 +49,28 @@ const useFirebase = () => {
       .then((result) => {
         setUser(result.user);
         setError("");
+        verifyEmail();
       })
       .catch((error) => {
         setError(error.message);
       });
+  };
+
+  const signInUser = () => {
+    signInWithEmailAndPassword(auth, email, password)
+      .then((result) => {
+        setUser(result.user);
+        setError("");
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
+  };
+  // verify email address
+  const verifyEmail = () => {
+    sendEmailVerification(auth.currentUser).then((result) => {
+      console.log(result);
+    });
   };
 
   // observe user state change
@@ -77,6 +97,7 @@ const useFirebase = () => {
     handleEmailChange,
     handlePasswordChange,
     handleSignIn,
+    signInUser,
     logOut,
   };
 };
