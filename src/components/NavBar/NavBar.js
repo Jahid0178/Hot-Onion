@@ -1,13 +1,12 @@
 import React from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Container, Nav, Navbar, NavLink } from "react-bootstrap";
 import "./NavBar.css";
 import Logo from "../../images/logo.png";
-import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <div>
-      <Navbar bg="light" className="my-2">
+      <Navbar bg="light" className="my-2" sticky="top">
         <Container fluid>
           <Navbar.Brand href="#home">
             <img
@@ -18,12 +17,12 @@ const NavBar = () => {
             />
           </Navbar.Brand>
           <Nav className="ms-auto">
-            <Nav.Link href="/login" className="fw-bold">
+            <NavLink to="/login" className="fw-bold">
               Login
-            </Nav.Link>
-            <Nav.Link href="/signup" className="signup-btn">
+            </NavLink>
+            <NavLink to="/signup" className="signup-btn">
               Sign Up
-            </Nav.Link>
+            </NavLink>
           </Nav>
         </Container>
       </Navbar>
