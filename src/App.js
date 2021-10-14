@@ -7,22 +7,28 @@ import Footer from "./components/Footer/Footer";
 import AuthProvider from "./context/AuthProvider";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LogIn from "./components/LogIn/LogIn";
+import SignUp from "./components/SignUp/SignUp";
 
 function App() {
   return (
     <div>
       <AuthProvider>
         <Router>
+          <NavBar></NavBar>
           <Switch>
+            <Route exact path="/">
+              <Hero></Hero>
+              <ChooseUs></ChooseUs>
+            </Route>
             <Route path="/login">
               <LogIn></LogIn>
             </Route>
+            <Route path="/signup">
+              <SignUp></SignUp>
+            </Route>
           </Switch>
+          <Footer></Footer>
         </Router>
-        <NavBar></NavBar>
-        <Hero></Hero>
-        <ChooseUs></ChooseUs>
-        <Footer></Footer>
       </AuthProvider>
     </div>
   );
