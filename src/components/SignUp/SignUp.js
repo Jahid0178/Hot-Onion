@@ -4,12 +4,13 @@ import useAuth from "../../hooks/useAuth";
 import "./SignUp.css";
 
 const SignUp = () => {
-  const { handleEmailChange, handlePasswordChange, handleSignIn } = useAuth();
+  const { handleEmailChange, handlePasswordChange, handleSignIn, error } =
+    useAuth();
   return (
     <div className="signup-container d-flex justify-content-center align-items-center">
       <Container>
         <div className="w-50 mx-auto">
-          <h2 className="text-primary">This is sign up</h2>
+          <h2 className="text-primary my-3">Sign up</h2>
           <Form onSubmit={(e) => e.preventDefault()}>
             <Form.Group
               as={Row}
@@ -49,6 +50,9 @@ const SignUp = () => {
               className="mb-3"
               controlId="formHorizontalCheck"
             >
+              <div>
+                <p className="text-danger">{error}</p>
+              </div>
               <Col sm={{ span: 10, offset: 2 }}>
                 <Form.Check label="Remember me" />
               </Col>

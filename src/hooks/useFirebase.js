@@ -17,7 +17,6 @@ const useFirebase = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const auth = getAuth();
-  console.log(email, password);
 
   const googleProvider = new GoogleAuthProvider();
 
@@ -40,10 +39,14 @@ const useFirebase = () => {
   };
 
   const handleSignIn = () => {
+    if (password.length < 6) {
+      setError("Password should be at least 6 characters or long");
+      return;
+    }
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
-        const user = result.user;
-        console.log(user);
+        setUser(result.user);
+        setError("");
       })
       .catch((error) => {
         setError(error.message);
