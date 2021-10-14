@@ -8,6 +8,7 @@ import AuthProvider from "./context/AuthProvider";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LogIn from "./components/LogIn/LogIn";
 import SignUp from "./components/SignUp/SignUp";
+import Foods from "./components/Foods/Foods";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Switch>
             <Route exact path="/">
               <Hero></Hero>
+              <Foods></Foods>
               <ChooseUs></ChooseUs>
             </Route>
             <Route path="/login">
