@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Card, Container, Row, Col } from "react-bootstrap";
 import "./Foods.css";
 import Data from "../../data/allData";
@@ -11,6 +11,11 @@ const Foods = () => {
     });
     setItems(updateItem);
   };
+
+  useEffect(() => {
+    filterItem("Breakfast");
+  }, []);
+
   return (
     <div className="foods-container">
       <Container>
@@ -45,7 +50,7 @@ const Foods = () => {
                     className="card-container mb-2"
                   >
                     <Card.Img variant="top" src={image} alt={title} />
-                    <Card.Body>
+                    <Card.Body className="text-center">
                       <Card.Title>{title}</Card.Title>
                       <Card.Text>{desc}</Card.Text>
                       <p>{price}</p>
