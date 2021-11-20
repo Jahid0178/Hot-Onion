@@ -5,8 +5,10 @@
 
 .footer-logo {
   width: 150px;
+  margin-bottom: 20px;
 }
 
 .footer-ul {
   list-style-type: none;
+  padding-left: 0;
 }

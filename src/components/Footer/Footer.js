@@ -9,10 +9,10 @@ const Footer = () => {
       <Container>
         <div className="p-5">
           <Row className="mb-5">
-            <Col>
+            <Col xs={12} sm={12} md={7}>
               <img src={FooterLogo} alt="" className="footer-logo" />
             </Col>
-            <Col className="ms-5 ps-5">
+            <Col xs={12} sm={12} md={2}>
               <ul className="footer-ul">
                 <li className="text-white">About Online Food</li>
                 <li className="text-white">Read Our Blog</li>
@@ -20,7 +20,7 @@ const Footer = () => {
                 <li className="text-white">Add your restaurant</li>
               </ul>
             </Col>
-            <Col>
+            <Col xs={12} sm={12} md={3}>
               <ul className="footer-ul">
                 <li className="text-white">Get help</li>
                 <li className="text-white">Read FAQs</li>
@@ -29,16 +29,16 @@ const Footer = () => {
               </ul>
             </Col>
           </Row>
-          <div className="d-flex justify-content-between">
-            <div className="text-white">
+          <Row>
+            <Col xs={12} sm={12} md={6} className="text-white">
               <p>Copyright &copy; 2021 Online Food</p>
-            </div>
-            <div className="text-white">
+            </Col>
+            <Col xs={12} sm={12} md={6} className="text-white text-center">
               <span className="mx-3">Privacy Policy</span>
-              <span className="mx-5">Terms of Use</span>
+              <span className="mx-4">Terms of Use</span>
               <span>Pricing</span>
-            </div>
-          </div>
+            </Col>
+          </Row>
         </div>
       </Container>
     </div>
