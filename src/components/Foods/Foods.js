@@ -44,12 +44,17 @@ const Foods = () => {
             {items.map((item) => {
               const { title, price, desc, image, id } = item;
               return (
-                <Col key={id}>
+                <Col key={id} xs={12} sm={12} md={4}>
                   <Card
                     style={{ width: "19rem", border: "none" }}
-                    className="card-container mb-3 p-2"
+                    className="card-container mb-5 p-2"
                   >
-                    <Card.Img variant="top" src={image} alt={title} />
+                    <Card.Img
+                      variant="top"
+                      src={image}
+                      alt={title}
+                      className="img-fluid"
+                    />
                     <Card.Body className="text-center">
                       <Card.Title>{title}</Card.Title>
                       <Card.Text>{desc}</Card.Text>
