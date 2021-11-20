@@ -83,7 +83,7 @@ const useFirebase = () => {
         setUser({});
       }
     });
-  }, []);
+  }, [auth]);
 
   // sign out
   const logOut = () => {
