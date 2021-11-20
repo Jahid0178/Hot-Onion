@@ -46,14 +46,14 @@ const Foods = () => {
               return (
                 <Col key={id}>
                   <Card
-                    style={{ width: "18rem", border: "none" }}
+                    style={{ width: "19rem", border: "none" }}
                     className="card-container mb-3 p-2"
                   >
                     <Card.Img variant="top" src={image} alt={title} />
                     <Card.Body className="text-center">
                       <Card.Title>{title}</Card.Title>
                       <Card.Text>{desc}</Card.Text>
-                      <p>{price}</p>
+                      <p>${price}</p>
                     </Card.Body>
                   </Card>
                 </Col>
