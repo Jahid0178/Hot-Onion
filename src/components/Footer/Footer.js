@@ -30,7 +30,7 @@ const Footer = () => {
             </Col>
           </Row>
           <Row>
-            <Col xs={12} sm={12} md={6} className="text-white">
+            <Col xs={12} sm={12} md={6} className="text-secondary">
               <p>Copyright &copy; 2021 Online Food</p>
             </Col>
             <Col xs={12} sm={12} md={6} className="text-white text-center">
